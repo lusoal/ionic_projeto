@@ -10,6 +10,9 @@ import { SplashScreen } from '@ionic-native/splash-screen';
 import { IntroPageModule } from '../pages/intro/intro.module';
 import { LivrariaPage } from '../pages/livraria/livraria';
 import { CadastrarLivrosPageModule } from '../pages/cadastrar-livros/cadastrar-livros.module';
+import { ListarLivrosPageModule } from '../pages/listar-livros/listar-livros.module';
+import { PesquisarLivrosPageModule } from '../pages/pesquisar-livros/pesquisar-livros.module';
+import { LivrosPageModule } from '../pages/livros/livros.module';
 
 @NgModule({
   declarations: [
@@ -21,7 +24,10 @@ import { CadastrarLivrosPageModule } from '../pages/cadastrar-livros/cadastrar-l
     BrowserModule,
     IonicModule.forRoot(MyApp),
     IntroPageModule,
-    CadastrarLivrosPageModule
+    CadastrarLivrosPageModule,
+    ListarLivrosPageModule,
+    PesquisarLivrosPageModule,
+    LivrosPageModule
   ],
   bootstrap: [IonicApp],
   entryComponents: [

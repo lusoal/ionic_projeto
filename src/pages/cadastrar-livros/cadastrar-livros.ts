@@ -1,7 +1,6 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { IonicPage, NavController, NavParams, AlertController } from 'ionic-angular';
 import { Livro } from '../../model/livro';
-
 
 /**
  * Generated class for the CadastrarLivrosPage page.
@@ -16,20 +15,37 @@ import { Livro } from '../../model/livro';
   templateUrl: 'cadastrar-livros.html',
 })
 export class CadastrarLivrosPage {
+
+  //Instanciando um objeto de Livro passando parametros
   livro: Livro = {
     titulo: '', subtitulo: '', capa: '', editora: '',
-    autor: '', isbn : '', publicacao: '',
-    paginas: 12
+    autor: '', isbn: '', publicacao: '',
+    paginas: null
   };
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) { }
+  constructor(public navCtrl: NavController, public navParams: NavParams, private alertController: AlertController) { }
+
+
+  openAlert() {
+    let addToAlert = this.alertController.create({
+      title: 'Livro Cadastrado com Sucesso',
+      subTitle: 'O Livro '+ this.livro.titulo + ' foi cadastrado com sucesso',
+      buttons: ['Ok']
+    });
+
+    addToAlert.present();
+  }
 
   logForm() {
     console.log(this.livro)
+    this.openAlert();
+    this.navCtrl.pop();
+
   }
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad CadastrarLivrosPage');
+
   }
 
 }

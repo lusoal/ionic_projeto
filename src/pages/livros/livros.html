@@ -12,21 +12,29 @@
 
 </ion-header>
 <ion-content padding>
-    <ion-card>
-        <img src=""/>
-        <ion-card-content>
-          <ion-card-title>
-            {{livrinho.titulo}}
-          </ion-card-title>
-          <p>
-            {{livrinho.subtitulo}}
-          </p>
-          <p>
-            {{livrinho.paginas}}
-          </p>
-          <p>
-              {{livrinho.editora}}
-            </p>
-        </ion-card-content>
-      </ion-card>
+  <ion-card>
+    <img src="{{livrinho.imageUrl}}" />
+    <ion-card-content>
+      <ion-card-title>
+        {{livrinho.titulo}}
+      </ion-card-title>
+      <p>
+        {{livrinho.subtitulo}}
+      </p>
+      <p>
+        {{livrinho.paginas}}
+      </p>
+      <p>
+        {{livrinho.editora.nome}}
+      </p>
+      <p>
+        {{livrinho.autor.nome}}
+      </p>
+      <p>
+        {{livrinho.autor.descricao}}
+      </p>
+      <button ion-button color="danger">Deletar</button>
+      <button ion-button (click)="alterarLivro(livrinho)">Alterar</button>
+    </ion-card-content>
+  </ion-card>
 </ion-content>

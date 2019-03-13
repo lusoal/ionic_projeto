@@ -7,12 +7,12 @@
 <ion-header>
 
   <ion-navbar>
-    <ion-title>Cadastrar Livros</ion-title>
+    <ion-title>Alterar Livro</ion-title>
   </ion-navbar>
 
 </ion-header>
 <ion-content padding>
-  <form (ngSubmit)="logForm()">
+  <form>
     <ion-list>
       <ion-item>
         <ion-label fixed>Titulo:</ion-label>
@@ -47,6 +47,6 @@
         <ion-input type="text" [(ngModel)]="livro.paginas" name="paginas"></ion-input>
       </ion-item>
     </ion-list>
-    <button ion-button type="submit" block>Cadastrar Livro</button>
+    <button ion-button type="submit" block>Alterar Livro</button>
   </form>
 </ion-content>

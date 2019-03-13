@@ -13,6 +13,7 @@ import { CadastrarLivrosPageModule } from '../pages/cadastrar-livros/cadastrar-l
 import { ListarLivrosPageModule } from '../pages/listar-livros/listar-livros.module';
 import { PesquisarLivrosPageModule } from '../pages/pesquisar-livros/pesquisar-livros.module';
 import { LivrosPageModule } from '../pages/livros/livros.module';
+import { AlterarLivroPageModule } from '../pages/alterar-livro/alterar-livro.module';
 
 @NgModule({
   declarations: [
@@ -27,7 +28,8 @@ import { LivrosPageModule } from '../pages/livros/livros.module';
     CadastrarLivrosPageModule,
     ListarLivrosPageModule,
     PesquisarLivrosPageModule,
-    LivrosPageModule
+    LivrosPageModule,
+    AlterarLivroPageModule
   ],
   bootstrap: [IonicApp],
   entryComponents: [

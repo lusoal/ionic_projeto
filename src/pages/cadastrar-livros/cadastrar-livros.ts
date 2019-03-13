@@ -1,6 +1,8 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams, AlertController } from 'ionic-angular';
 import { Livro } from '../../model/livro';
+import { Autor } from '../../model/autor';
+import { Editora } from '../../model/editora';
 
 /**
  * Generated class for the CadastrarLivrosPage page.
@@ -16,11 +18,18 @@ import { Livro } from '../../model/livro';
 })
 export class CadastrarLivrosPage {
 
-  //Instanciando um objeto de Livro passando parametros
+  //O cadastro sera postado na API, pensar em alguma forma de vincular com o Ator, ou adicionar campos no cadastro do Livro
+  autor: Autor = {
+    nome: '', nascimento: 1800, descricao: 'Teste'
+  }
+  editora: Editora = {
+    nome: '', descricao: 'Teste'
+  }
+
   livro: Livro = {
-    titulo: '', subtitulo: '', capa: '', editora: '',
-    autor: '', isbn: '', publicacao: '',
-    paginas: null
+    titulo: '', subtitulo: '', capa: '', editora: this.editora,
+    autor: this.autor, isbn: '', publicacao: '',
+    paginas: null, imageUrl: '',
   };
 
   constructor(public navCtrl: NavController, public navParams: NavParams, private alertController: AlertController) { }

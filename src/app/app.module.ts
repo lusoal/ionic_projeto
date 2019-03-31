@@ -1,6 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { ErrorHandler, NgModule } from '@angular/core';
 import { IonicApp, IonicErrorHandler, IonicModule } from 'ionic-angular';
+import {HttpModule} from "@angular/http";
 
 import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
@@ -14,6 +15,7 @@ import { ListarLivrosPageModule } from '../pages/listar-livros/listar-livros.mod
 import { PesquisarLivrosPageModule } from '../pages/pesquisar-livros/pesquisar-livros.module';
 import { LivrosPageModule } from '../pages/livros/livros.module';
 import { AlterarLivroPageModule } from '../pages/alterar-livro/alterar-livro.module';
+import { LivroProvider } from '../providers/livro/livro';
 
 @NgModule({
   declarations: [
@@ -29,7 +31,8 @@ import { AlterarLivroPageModule } from '../pages/alterar-livro/alterar-livro.mod
     ListarLivrosPageModule,
     PesquisarLivrosPageModule,
     LivrosPageModule,
-    AlterarLivroPageModule
+    AlterarLivroPageModule,
+    HttpModule
   ],
   bootstrap: [IonicApp],
   entryComponents: [
@@ -40,7 +43,8 @@ import { AlterarLivroPageModule } from '../pages/alterar-livro/alterar-livro.mod
   providers: [
     StatusBar,
     SplashScreen,
-    {provide: ErrorHandler, useClass: IonicErrorHandler}
+    {provide: ErrorHandler, useClass: IonicErrorHandler},
+    LivroProvider
   ]
 })
 export class AppModule {}

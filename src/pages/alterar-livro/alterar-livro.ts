@@ -18,6 +18,7 @@ export class AlterarLivroPage {
   public livro:Livro;
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
+    //pegar o parametro passado de outra pagina
     this.livro = this.navParams.get("livro")
   }
 

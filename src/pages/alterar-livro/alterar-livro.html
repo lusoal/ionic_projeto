@@ -16,35 +16,31 @@
     <ion-list>
       <ion-item>
         <ion-label fixed>Titulo:</ion-label>
-        <ion-input type="text" [(ngModel)]="livro.titulo" name="titulo"></ion-input>
+        <ion-input type="text" [(ngModel)]="livro.details.title" name="titulo"></ion-input>
       </ion-item>
       <ion-item>
         <ion-label fixed>Subtitulo:</ion-label>
-        <ion-input type="text" [(ngModel)]="livro.subtitulo" name="subtitulo"></ion-input>
-      </ion-item>
-      <ion-item>
-        <ion-label fixed>Capa:</ion-label>
-        <ion-input type="text" [(ngModel)]="livro.capa" name="capa"></ion-input>
+        <ion-input type="text" [(ngModel)]="livro.details.subtitle" name="subtitulo"></ion-input>
       </ion-item>
       <ion-item>
         <ion-label fixed>Editora:</ion-label>
-        <ion-input type="text" [(ngModel)]="livro.editora.nome" name="editora"></ion-input>
+        <ion-input type="text" [(ngModel)]="livro.details.publishers[0]" name="editora"></ion-input>
       </ion-item>
-      <ion-item>
+      <!-- <ion-item>
         <ion-label fixed>Autor:</ion-label>
         <ion-input type="text" [(ngModel)]="livro.autor.nome" name="autor"></ion-input>
-      </ion-item>
+      </ion-item> -->
       <ion-item>
         <ion-label fixed>ISBN:</ion-label>
-        <ion-input type="text" [(ngModel)]="livro.isbn" name="isbn"></ion-input>
+        <ion-input type="text" [(ngModel)]="livro[0]" name="isbn"></ion-input>
       </ion-item>
       <ion-item>
         <ion-label fixed>Publicacao:</ion-label>
-        <ion-input type="text" [(ngModel)]="livro.publicacao" name="publicacao"></ion-input>
+        <ion-input type="text" [(ngModel)]="livro.details.publish_date" name="publicacao"></ion-input>
       </ion-item>
       <ion-item>
         <ion-label fixed>Paginas:</ion-label>
-        <ion-input type="text" [(ngModel)]="livro.paginas" name="paginas"></ion-input>
+        <ion-input type="text" [(ngModel)]="livro.details.number_of_pages" name="paginas"></ion-input>
       </ion-item>
     </ion-list>
     <button ion-button type="submit" block>Alterar Livro</button>

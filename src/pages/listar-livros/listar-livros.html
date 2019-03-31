@@ -16,9 +16,9 @@
 <ion-content padding>
   <!-- livros e a lista de livros que estamos iterando com o for each -->
   <ion-list>
-    <ion-item *ngFor="let livro of livros" (click)="irParaDestino(livro)">
-      <h2>{{livro.titulo}}</h2>
-      <p>{{livro.subtitulo}}</p>
+    <ion-item *ngFor="let livro of lista_livros" (click)="irParaDestino(livro)">
+      <h2>{{livro.details.title}}</h2>
+      <p>{{livro.details.subtitle}}</p>
     </ion-item>
   </ion-list>
 
